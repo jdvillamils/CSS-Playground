@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pseudo Class Selectors</title>
+<style>
+/* Styles go here. */
+/*Everythinf inside li which is inside a header is going to be changed */
+header li {
+  list-style: none;  /*no list points*/
+}
+a:link, a:visited { /*link represents no visited urls, while visited do represent. Here we are applying the same styling to both visited and no visited urls*/
+  text-decoration: none;
+  background-color: green;
+  border: 1px solid blue;
+  color: black;
+  display: block;
+  width: 200px;
+  text-align: center;
+  margin-bottom: 1px;
+}
+/*if we want an style change after clickng a link, we should split a:link and a:visited, and set them with a different config*/
+
+a:hover { /*here, hover is activated by the user when they pass the pointer over the elements, but dont click on them*/
+  background-color: red;
+  color: purple;
+}
+a:active { /* while active do changes just when a click action has started*/
+    background-color: blue;
+  color: brown;
+  }
+  /*so, in this script, passing the pointer change the background color to red and letters to purple, while clicking change bck color to blue and letter to brown*/
+
+header li:nth-child(3) { /*On the other hand, this function is used to represent where, in a chain, we want the changes, in this cases, we refer to the third child of the li class, inside the header*/
+  font-size: 24px;
+}
+
+section div:nth-child(odd) { /*every odd div, inside section will apply*/
+  background-color: gray;
+}
+
+section div:nth-child(4):hover { /*here we combine setting for the 4th child div inside section, and the hover pseudo class, so, when passing over 4th and only this, the settings will apply*/
+  background-color: green;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+<h1>Pseudo Class Selectors</h1>
+
+<header>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="http://goo.gl/V0Wl6s" target="_blank">AngularJS Course</a></li>
+    <li><a href="http://www.facebook.com/CourseraWebDev" target="_blank">Facebook Fan Page</a></li>
+  </ul>
+</header>
+
+<section>
+  <div>DIV 1</div>
+  <div>DIV 2</div>
+  <div>DIV 3</div>
+  <div>DIV 4</div>
+  <div>DIV 5</div>
+  <div>DIV 6</div>
+  <div>DIV 7</div>
+  <div>DIV 8</div>
+  <div>DIV 9</div>
+  <div>DIV 10</div>
+  <div>DIV 11</div>
+  <div>DIV 12</div>
+  <div>DIV 13</div>
+  <div>DIV 14</div>
+  <div>DIV 15</div>
+  <div>DIV 16</div>
+  <div>DIV 17</div>
+  <div>DIV 18</div>
+  <div>DIV 19</div>
+  <div>DIV 20</div>
+</section>
+
+</body>
+</html>
