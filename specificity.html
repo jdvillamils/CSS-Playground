@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Inheritance in CSS</title>
+<style>
+header.navigation p {
+  color: blue;
+}
+p.blurb {
+  color: red;
+}
+p {
+  color: green !important;/*this important, forces the application of the settings even if this is not the most specific*/
+}
+/*If there are more than one style definition, the criteria for choosing wich is going to be applied, relies on the specificity, and the one most, wins. Clearly, the most specific definition is when we set after tagging inside the body. The meassuring from most to less important goes: style, ID, class, pseudo, attribute, and numer of elements*/
+</style>
+</head>
+<body>
+<header class="navigation">
+  <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero soluta enim aut! Nihil nam obcaecati, fugiat sint sit libero voluptate eos incidunt odio neque cum, dignissimos aperiam, magnam nisi debitis.</p>
+</header>
+</body>
+</html>
