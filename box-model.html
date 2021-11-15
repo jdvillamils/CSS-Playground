@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Box Model</title>
+<style>
+* {
+  box-sizing: border-box;/*this command makes every box to fit inside the defined width, includding padding and border, */
+  margin: 0;
+  padding: 0;
+} /*This redefines the default setting of top margin for the entire document, thanks to star *  tag, which applies the properties to every section in the document.*/
+
+body {
+  background-color: gray;
+}
+
+#box {
+  background-color: blue;
+  padding: 10px;
+  border: 5px solid black;
+  width: 300px; /*total size of the box, when border-box is active*/
+  height: 50px;
+  margin-top: 50px;
+  overflow: auto; /*this adds the lateral scroll box to the section */ 
+}
+#content {
+  background-color: #90EE90; /* green */
+}
+
+h1 {
+  margin-bottom: 30px; /*margins at laterals are cumulative, so, we need to count for the one of right element and for the one of left element, while top and bottom are not, the bigger one wins*/
+}
+
+</style>
+</head>
+<body>
+
+<h1>Box Model</h1>
+
+<div id="box">
+  <div id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit error quis ab perspiciatis eos inventore recusandae iste itaque numquam facilis, tenetur. Doloribus officiis quae facilis, nisi, ex similique. Animi, perferendis. 
+  </div>
+</div>
+
+
+</body>
+</html>
