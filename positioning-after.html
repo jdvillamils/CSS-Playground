@@ -15,7 +15,7 @@ h1 {
 
 div#container {
   background-color: #00FFFF;
-  position: relative;
+  position: relative; /*The relative position takes the original position of the element and moves it according to the setting below. In this case top 60 px is moving the element 60 px FROM the top, and this is pretty much the same for the other directions. It means the displacement is being done from there, no to there. Everithing inside an element, is moved within. Browser still consider that the original spcae of the element is occupied, so, any other element will be displaced, even if it seems empty*/
   top: 60px;
 }
 p {
