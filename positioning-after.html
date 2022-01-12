@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>Positioning Elements</title>
 <style>
+  /*The relative position takes the original position of the element and moves it according to the setting below. In this case top 60 px is moving the element 60 px FROM the top, and this is pretty much the same for the other directions. It means the displacement is being done from there, no to there. Everithing inside an element, is moved within. Browser still consider that the original spcae of the element is occupied, so, any other element will be displaced, even if it seems empty*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,10 +14,10 @@ h1 {
   margin-bottom: 15px;
 }
 
-div#container {
+div#container {/*we set this container with  relative setting in order to specify the box 3 to relative position to this section (which is containing it) so, we can move the third box to the position where the displaced first box was.*/
   background-color: #00FFFF;
-  position: relative; /*The relative position takes the original position of the element and moves it according to the setting below. In this case top 60 px is moving the element 60 px FROM the top, and this is pretty much the same for the other directions. It means the displacement is being done from there, no to there. Everithing inside an element, is moved within. Browser still consider that the original spcae of the element is occupied, so, any other element will be displaced, even if it seems empty*/
-  top: 60px;
+  position: relative; 
+  top: 60px;/*this moves the container with all the elements inside, 60 pixels down.*/
 }
 p {
   width: 50px;
